@@ -11,7 +11,10 @@ const flavorObj = {
 }
 
 for (let i = 0; i < flavorsArray.length; i++){
-    console.log(flavorsArray[i]);
-flavorObj[flavorsArray[i]] = 1
+if (flavorsArray[i] in flavorObj){
+    flavorObj[flavorsArray[i]] += 1
 }
+else {
+    flavorObj[flavorsArray[i]] = 1
+}}
 console.log(flavorObj);
